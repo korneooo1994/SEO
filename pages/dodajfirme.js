@@ -1,5 +1,5 @@
 import React from 'react';
-import { MDBRow, MDBCol, MDBBtn } from 'mdbreact';
+import { MDBRow, MDBCol, MDBBtn, MDBInput } from 'mdbreact';
 
 class FormsPage extends React.Component {
 	state = {
@@ -105,11 +105,7 @@ class FormsPage extends React.Component {
 							</label>
 							<input
 								value={this.state.name.value}
-								className={
-									this.state.name.valid
-										? 'form-control is-valid'
-										: 'form-control is-invalid'
-								}
+								className={this.state.name.valid ? 'form-control is-valid' : 'form-control is-invalid'}
 								name="name"
 								onChange={this.changeHandler}
 								type="text"
@@ -120,65 +116,61 @@ class FormsPage extends React.Component {
 							<div className="valid-feedback">Wygląda ok!</div>
 						</MDBCol>
 						<MDBCol md="4" className="mb-3 mt-5">
-							<label
-								htmlFor="defaultFormRegisterPasswordEx4"
-								className="grey-text"
-							>
-								Kolejne pole
+							<label htmlFor="defaultFormRegisterPasswordEx4" className="grey-text">
+								Województwo
 							</label>
 							<input
-								value={this.state.zip.value}
-								className={
-									this.state.zip.valid
-										? 'form-control is-valid'
-										: 'form-control is-invalid'
-								}
+								value={this.state.state.value}
+								className={this.state.state.valid ? 'form-control is-valid' : 'form-control is-invalid'}
 								onChange={this.changeHandler}
 								type="text"
 								id="defaultFormRegisterPasswordEx4"
 								className="form-control"
-								name="zip"
+								name="state"
 								placeholder="Kolejne pole"
 							/>
 						</MDBCol>
 						<MDBCol md="4" className="mb-3 mt-5">
-							<label
-								htmlFor="defaultFormRegisterPasswordEx4"
-								className="grey-text"
-							>
-								Kolejne pole
+							<label htmlFor="defaultFormRegisterPasswordEx4" className="grey-text">
+								Miasto
 							</label>
 							<input
-								value={this.state.zip.value}
-								className={
-									this.state.zip.valid
-										? 'form-control is-valid'
-										: 'form-control is-invalid'
-								}
+								value={this.state.city.value}
+								className={this.state.city.valid ? 'form-control is-valid' : 'form-control is-invalid'}
 								onChange={this.changeHandler}
 								type="text"
 								id="defaultFormRegisterPasswordEx4"
 								className="form-control"
-								name="zip"
+								name="city"
 								placeholder="Kolejne pole"
 							/>
 						</MDBCol>
 					</MDBRow>
 					<MDBRow>
 						<MDBCol md="4" className="mb-3">
-							<label
-								htmlFor="defaultFormRegisterPasswordEx4"
-								className="grey-text"
-							>
-								Kolejne pole
+							<label htmlFor="defaultFormRegisterPasswordEx4" className="grey-text">
+								Adres
+							</label>
+							<input
+								value={this.state.adress.value}
+								className={
+									this.state.adress.valid ? 'form-control is-valid' : 'form-control is-invalid'
+								}
+								onChange={this.changeHandler}
+								type="text"
+								id="defaultFormRegisterPasswordEx4"
+								className="form-control"
+								name="adress"
+								placeholder="Kolejne pole"
+							/>
+						</MDBCol>
+						<MDBCol md="4" className="mb-3">
+							<label htmlFor="defaultFormRegisterPasswordEx4" className="grey-text">
+								Kod pocztowy
 							</label>
 							<input
 								value={this.state.zip.value}
-								className={
-									this.state.zip.valid
-										? 'form-control is-valid'
-										: 'form-control is-invalid'
-								}
+								className={this.state.zip.valid ? 'form-control is-valid' : 'form-control is-invalid'}
 								onChange={this.changeHandler}
 								type="text"
 								id="defaultFormRegisterPasswordEx4"
@@ -188,456 +180,259 @@ class FormsPage extends React.Component {
 							/>
 						</MDBCol>
 						<MDBCol md="4" className="mb-3">
-							<label
-								htmlFor="defaultFormRegisterPasswordEx4"
-								className="grey-text"
-							>
-								Kolejne pole
+							<label htmlFor="defaultFormRegisterPasswordEx4" className="grey-text">
+								NIP
 							</label>
 							<input
-								value={this.state.zip.value}
-								className={
-									this.state.zip.valid
-										? 'form-control is-valid'
-										: 'form-control is-invalid'
-								}
+								value={this.state.nip.value}
+								className={this.state.nip.valid ? 'form-control is-valid' : 'form-control is-invalid'}
 								onChange={this.changeHandler}
 								type="text"
 								id="defaultFormRegisterPasswordEx4"
 								className="form-control"
-								name="zip"
-								placeholder="Kolejne pole"
-							/>
-						</MDBCol>
-						<MDBCol md="4" className="mb-3">
-							<label
-								htmlFor="defaultFormRegisterPasswordEx4"
-								className="grey-text"
-							>
-								Kolejne pole
-							</label>
-							<input
-								value={this.state.zip.value}
-								className={
-									this.state.zip.valid
-										? 'form-control is-valid'
-										: 'form-control is-invalid'
-								}
-								onChange={this.changeHandler}
-								type="text"
-								id="defaultFormRegisterPasswordEx4"
-								className="form-control"
-								name="zip"
+								name="nip"
 								placeholder="Kolejne pole"
 							/>
 						</MDBCol>
 					</MDBRow>
 					<MDBRow>
 						<MDBCol md="4" className="mb-3">
-							<label
-								htmlFor="defaultFormRegisterPasswordEx4"
-								className="grey-text"
-							>
-								Kolejne pole
+							<label htmlFor="defaultFormRegisterPasswordEx4" className="grey-text">
+								REGON
 							</label>
 							<input
-								value={this.state.zip.value}
-								className={
-									this.state.zip.valid
-										? 'form-control is-valid'
-										: 'form-control is-invalid'
-								}
+								value={this.state.regon.value}
+								className={this.state.regon.valid ? 'form-control is-valid' : 'form-control is-invalid'}
 								onChange={this.changeHandler}
 								type="text"
 								id="defaultFormRegisterPasswordEx4"
 								className="form-control"
-								name="zip"
+								name="regon"
 								placeholder="Kolejne pole"
 							/>
 						</MDBCol>
 						<MDBCol md="4" className="mb-3">
-							<label
-								htmlFor="defaultFormRegisterPasswordEx4"
-								className="grey-text"
-							>
-								Kolejne pole
+							<label htmlFor="defaultFormRegisterPasswordEx4" className="grey-text">
+								Rok założenia
 							</label>
 							<input
-								value={this.state.zip.value}
-								className={
-									this.state.zip.valid
-										? 'form-control is-valid'
-										: 'form-control is-invalid'
-								}
+								value={this.state.year.value}
+								className={this.state.year.valid ? 'form-control is-valid' : 'form-control is-invalid'}
 								onChange={this.changeHandler}
 								type="text"
 								id="defaultFormRegisterPasswordEx4"
 								className="form-control"
-								name="zip"
+								name="year"
 								placeholder="Kolejne pole"
 							/>
 						</MDBCol>
 						<MDBCol md="4" className="mb-3">
-							<label
-								htmlFor="defaultFormRegisterPasswordEx4"
-								className="grey-text"
-							>
-								Kolejne pole
+							<label htmlFor="defaultFormRegisterPasswordEx4" className="grey-text">
+								Numer stacjonarny
 							</label>
 							<input
-								value={this.state.zip.value}
-								className={
-									this.state.zip.valid
-										? 'form-control is-valid'
-										: 'form-control is-invalid'
-								}
+								value={this.state.tel.value}
+								className={this.state.tel.valid ? 'form-control is-valid' : 'form-control is-invalid'}
 								onChange={this.changeHandler}
 								type="text"
 								id="defaultFormRegisterPasswordEx4"
 								className="form-control"
-								name="zip"
+								name="tel"
 								placeholder="Kolejne pole"
 							/>
 						</MDBCol>
 					</MDBRow>
 					<MDBRow>
 						<MDBCol md="4" className="mb-3">
-							<label
-								htmlFor="defaultFormRegisterPasswordEx4"
-								className="grey-text"
-							>
-								Kolejne pole
+							<label htmlFor="defaultFormRegisterPasswordEx4" className="grey-text">
+								Numer komórkowy
 							</label>
 							<input
-								value={this.state.zip.value}
-								className={
-									this.state.zip.valid
-										? 'form-control is-valid'
-										: 'form-control is-invalid'
-								}
+								value={this.state.cell.value}
+								className={this.state.cell.valid ? 'form-control is-valid' : 'form-control is-invalid'}
 								onChange={this.changeHandler}
 								type="text"
 								id="defaultFormRegisterPasswordEx4"
 								className="form-control"
-								name="zip"
+								name="cell"
 								placeholder="Kolejne pole"
 							/>
 						</MDBCol>
 						<MDBCol md="4" className="mb-3">
-							<label
-								htmlFor="defaultFormRegisterPasswordEx4"
-								className="grey-text"
-							>
-								Kolejne pole
+							<label htmlFor="defaultFormRegisterPasswordEx4" className="grey-text">
+								Facebook
 							</label>
 							<input
-								value={this.state.zip.value}
-								className={
-									this.state.zip.valid
-										? 'form-control is-valid'
-										: 'form-control is-invalid'
-								}
+								value={this.state.fb.value}
+								className={this.state.fb.valid ? 'form-control is-valid' : 'form-control is-invalid'}
 								onChange={this.changeHandler}
 								type="text"
 								id="defaultFormRegisterPasswordEx4"
 								className="form-control"
-								name="zip"
+								name="fb"
 								placeholder="Kolejne pole"
 							/>
 						</MDBCol>
 						<MDBCol md="4" className="mb-3">
-							<label
-								htmlFor="defaultFormRegisterPasswordEx4"
-								className="grey-text"
-							>
-								Kolejne pole
+							<label htmlFor="defaultFormRegisterPasswordEx4" className="grey-text">
+								Twitter
 							</label>
 							<input
-								value={this.state.zip.value}
+								value={this.state.twitter.value}
 								className={
-									this.state.zip.valid
-										? 'form-control is-valid'
-										: 'form-control is-invalid'
+									this.state.twitter.valid ? 'form-control is-valid' : 'form-control is-invalid'
 								}
 								onChange={this.changeHandler}
 								type="text"
 								id="defaultFormRegisterPasswordEx4"
 								className="form-control"
-								name="zip"
+								name="twitter"
 								placeholder="Kolejne pole"
 							/>
 						</MDBCol>
 					</MDBRow>
 					<MDBRow>
 						<MDBCol md="4" className="mb-3">
-							<label
-								htmlFor="defaultFormRegisterPasswordEx4"
-								className="grey-text"
-							>
-								Kolejne pole
+							<label htmlFor="defaultFormRegisterPasswordEx4" className="grey-text">
+								Instagram
 							</label>
 							<input
-								value={this.state.zip.value}
-								className={
-									this.state.zip.valid
-										? 'form-control is-valid'
-										: 'form-control is-invalid'
-								}
+								value={this.state.insta.value}
+								className={this.state.insta.valid ? 'form-control is-valid' : 'form-control is-invalid'}
 								onChange={this.changeHandler}
 								type="text"
 								id="defaultFormRegisterPasswordEx4"
 								className="form-control"
-								name="zip"
+								name="insta"
 								placeholder="Kolejne pole"
 							/>
 						</MDBCol>
 						<MDBCol md="4" className="mb-3">
-							<label
-								htmlFor="defaultFormRegisterPasswordEx4"
-								className="grey-text"
-							>
-								Kolejne pole
+							<label htmlFor="defaultFormRegisterPasswordEx4" className="grey-text">
+								E-mail
 							</label>
 							<input
-								value={this.state.zip.value}
-								className={
-									this.state.zip.valid
-										? 'form-control is-valid'
-										: 'form-control is-invalid'
-								}
+								value={this.state.email.value}
+								className={this.state.email.valid ? 'form-control is-valid' : 'form-control is-invalid'}
 								onChange={this.changeHandler}
 								type="text"
 								id="defaultFormRegisterPasswordEx4"
 								className="form-control"
-								name="zip"
+								name="email"
 								placeholder="Kolejne pole"
 							/>
 						</MDBCol>
 						<MDBCol md="4" className="mb-3">
-							<label
-								htmlFor="defaultFormRegisterPasswordEx4"
-								className="grey-text"
-							>
-								Kolejne pole
+							<label htmlFor="defaultFormRegisterPasswordEx4" className="grey-text">
+								Strona internetowa
 							</label>
 							<input
-								value={this.state.zip.value}
+								value={this.state.website.value}
 								className={
-									this.state.zip.valid
-										? 'form-control is-valid'
-										: 'form-control is-invalid'
+									this.state.website.valid ? 'form-control is-valid' : 'form-control is-invalid'
 								}
 								onChange={this.changeHandler}
 								type="text"
 								id="defaultFormRegisterPasswordEx4"
 								className="form-control"
-								name="zip"
+								name="website"
 								placeholder="Kolejne pole"
 							/>
 						</MDBCol>
 					</MDBRow>
 					<MDBRow>
 						<MDBCol md="4" className="mb-3">
-							<label
-								htmlFor="defaultFormRegisterPasswordEx4"
-								className="grey-text"
-							>
-								Kolejne pole
-							</label>
-							<input
-								value={this.state.zip.value}
-								className={
-									this.state.zip.valid
-										? 'form-control is-valid'
-										: 'form-control is-invalid'
-								}
-								onChange={this.changeHandler}
-								type="text"
-								id="defaultFormRegisterPasswordEx4"
-								className="form-control"
-								name="zip"
-								placeholder="Kolejne pole"
-							/>
+							
+							<MDBInput type="textarea" label="Twój opis"  />
 						</MDBCol>
-						<MDBCol md="4" className="mb-3">
-							<label
-								htmlFor="defaultFormRegisterPasswordEx4"
-								className="grey-text"
-							>
-								Kolejne pole
+						<MDBCol md="4" className="mb-3 mt-5" >
+							<label htmlFor="defaultFormRegisterPasswordEx4" className="grey-text">
+								Kategoria
 							</label>
-							<input
-								value={this.state.zip.value}
-								className={
-									this.state.zip.valid
-										? 'form-control is-valid'
-										: 'form-control is-invalid'
-								}
-								onChange={this.changeHandler}
-								type="text"
-								id="defaultFormRegisterPasswordEx4"
-								className="form-control"
-								name="zip"
-								placeholder="Kolejne pole"
-							/>
+							<div>
+        <select className="browser-default custom-select">
+          <option>Wybierz kategorię</option>
+          <option value="1">Option 1</option>
+          <option value="2">Option 2</option>
+          <option value="3">Option 3</option>
+        </select>
+      </div>
 						</MDBCol>
+					</MDBRow>
+					
+					<MDBRow>
 						<MDBCol md="4" className="mb-3">
-							<label
-								htmlFor="defaultFormRegisterPasswordEx4"
-								className="grey-text"
-							>
-								Kolejne pole
+							<label htmlFor="defaultFormRegisterPasswordEx4" className="grey-text">
+								Zdjęcie główne
 							</label>
-							<input
-								value={this.state.zip.value}
-								className={
-									this.state.zip.valid
-										? 'form-control is-valid'
-										: 'form-control is-invalid'
-								}
-								onChange={this.changeHandler}
-								type="text"
-								id="defaultFormRegisterPasswordEx4"
-								className="form-control"
-								name="zip"
-								placeholder="Kolejne pole"
-							/>
+							<div className="input-group">
+								<div className="input-group-prepend">
+									<span className="input-group-text" id="inputGroupFileAddon01">
+										Plik
+									</span>
+								</div>
+								<div className="custom-file">
+									<input
+										type="file"
+										className="custom-file-input"
+										id="inputGroupFile01"
+										aria-describedby="inputGroupFileAddon01"
+									/>
+									<label className="custom-file-label" htmlFor="inputGroupFile01">
+										Wybierz plik
+									</label>
+								</div>
+							</div>
 						</MDBCol>
 					</MDBRow>
 					<MDBRow>
 						<MDBCol md="4" className="mb-3">
-							<label
-								htmlFor="defaultFormRegisterPasswordEx4"
-								className="grey-text"
-							>
-								Kolejne pole
+							<label htmlFor="defaultFormRegisterPasswordEx4" className="grey-text">
+								Zdjęcie 2
 							</label>
-							<input
-								value={this.state.zip.value}
-								className={
-									this.state.zip.valid
-										? 'form-control is-valid'
-										: 'form-control is-invalid'
-								}
-								onChange={this.changeHandler}
-								type="text"
-								id="defaultFormRegisterPasswordEx4"
-								className="form-control"
-								name="zip"
-								placeholder="Kolejne pole"
-							/>
-						</MDBCol>
-						<MDBCol md="4" className="mb-3">
-							<label
-								htmlFor="defaultFormRegisterPasswordEx4"
-								className="grey-text"
-							>
-								Kolejne pole
-							</label>
-							<input
-								value={this.state.zip.value}
-								className={
-									this.state.zip.valid
-										? 'form-control is-valid'
-										: 'form-control is-invalid'
-								}
-								onChange={this.changeHandler}
-								type="text"
-								id="defaultFormRegisterPasswordEx4"
-								className="form-control"
-								name="zip"
-								placeholder="Kolejne pole"
-							/>
-						</MDBCol>
-						<MDBCol md="4" className="mb-3">
-							<label
-								htmlFor="defaultFormRegisterPasswordEx4"
-								className="grey-text"
-							>
-								Kolejne pole
-							</label>
-							<input
-								value={this.state.zip.value}
-								className={
-									this.state.zip.valid
-										? 'form-control is-valid'
-										: 'form-control is-invalid'
-								}
-								onChange={this.changeHandler}
-								type="text"
-								id="defaultFormRegisterPasswordEx4"
-								className="form-control"
-								name="zip"
-								placeholder="Kolejne pole"
-							/>
+							<div className="input-group">
+								<div className="input-group-prepend">
+									<span className="input-group-text" id="inputGroupFileAddon01">
+										Plik
+									</span>
+								</div>
+								<div className="custom-file">
+									<input
+										type="file"
+										className="custom-file-input"
+										id="inputGroupFile01"
+										aria-describedby="inputGroupFileAddon01"
+									/>
+									<label className="custom-file-label" htmlFor="inputGroupFile01">
+										Wybierz plik
+									</label>
+								</div>
+							</div>
 						</MDBCol>
 					</MDBRow>
 					<MDBRow>
 						<MDBCol md="4" className="mb-3">
-							<label
-								htmlFor="defaultFormRegisterPasswordEx4"
-								className="grey-text"
-							>
-								Kolejne pole
+							<label htmlFor="defaultFormRegisterPasswordEx4" className="grey-text">
+								Zdjęcie 3
 							</label>
-							<input
-								value={this.state.zip.value}
-								className={
-									this.state.zip.valid
-										? 'form-control is-valid'
-										: 'form-control is-invalid'
-								}
-								onChange={this.changeHandler}
-								type="text"
-								id="defaultFormRegisterPasswordEx4"
-								className="form-control"
-								name="zip"
-								placeholder="Kolejne pole"
-							/>
-						</MDBCol>
-						<MDBCol md="4" className="mb-3">
-							<label
-								htmlFor="defaultFormRegisterPasswordEx4"
-								className="grey-text"
-							>
-								Kolejne pole
-							</label>
-							<input
-								value={this.state.zip.value}
-								className={
-									this.state.zip.valid
-										? 'form-control is-valid'
-										: 'form-control is-invalid'
-								}
-								onChange={this.changeHandler}
-								type="text"
-								id="defaultFormRegisterPasswordEx4"
-								className="form-control"
-								name="zip"
-								placeholder="Kolejne pole"
-							/>
-						</MDBCol>
-						<MDBCol md="4" className="mb-3">
-							<label
-								htmlFor="defaultFormRegisterPasswordEx4"
-								className="grey-text"
-							>
-								Kolejne pole
-							</label>
-							<input
-								value={this.state.zip.value}
-								className={
-									this.state.zip.valid
-										? 'form-control is-valid'
-										: 'form-control is-invalid'
-								}
-								onChange={this.changeHandler}
-								type="text"
-								id="defaultFormRegisterPasswordEx4"
-								className="form-control"
-								name="zip"
-								placeholder="Kolejne pole"
-							/>
+							<div className="input-group">
+								<div className="input-group-prepend">
+									<span className="input-group-text" id="inputGroupFileAddon01">
+										Plik
+									</span>
+								</div>
+								<div className="custom-file">
+									<input
+										type="file"
+										className="custom-file-input"
+										id="inputGroupFile01"
+										aria-describedby="inputGroupFileAddon01"
+									/>
+									<label className="custom-file-label" htmlFor="inputGroupFile01">
+										Wybierz plik
+									</label>
+								</div>
+							</div>
 						</MDBCol>
 					</MDBRow>
 
@@ -653,9 +448,7 @@ class FormsPage extends React.Component {
 							<label className="custom-control-label" htmlFor="invalidCheck">
 								Zaakceptuj regulamin
 							</label>
-							<div className="invalid-feedback">
-								Musisz zaakceptować przed kontynuowaniem
-							</div>
+							<div className="invalid-feedback">Musisz zaakceptować przed kontynuowaniem</div>
 						</div>
 					</MDBCol>
 					<MDBBtn color="primary" type="submit">
